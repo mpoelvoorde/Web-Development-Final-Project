@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:600,900'); /* For "Fira Sans" font from Google Fonts */
+
+body {
+	font-family: "Fira Sans", "Helvetica", "Arial", sans-serif;
+	font-weight: 600;
+}
+
+.header {
+	padding: 1em;
+	margin: 1em;
+	overflow: hidden;
+}
+
+.header-img {
+	width: 50%;
+}
+
+img.logo {
+	max-width: 95%;
+	max-height: 95%;
+	float: left;
+}
+
+.header-slogan {
+	color: #fff;
+	display: table-cell;
+	font-size: 3.2vw; /* Means 3.2% of the width of the viewport */
+	padding-top: 5%;
+	float: right;
+	height: 100%;
+	width: 45%;
+}
+
+/* For rendering "home away from home" properly for when img.logo's max height is reached */
+@media screen and (min-width: 1180px) {
+	.header-slogan {
+		font-size: 38px;
+		padding-top: 57px;
+	}
+}
+
+.bold {
+	font-weight: 900;
+}
+
+.red {
+	color: red;
+}
+
+.green {
+	color: green;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.row {
+	margin-right: 1em;
+	margin-left: 1em;
+}
+
+.header {
+	background-color: #0069cc;
+	margin: 0;
+}
+
+.main {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+.footer {
+	background-color: #d9b38c;
+	padding: 1em;
+}
+
+#myCarousel {
+	display: block;
+	margin: auto;
+	height: 60vw;
+	width: 90vw;
+	max-height: 70vh;
+	max-width: 105vh;
+	overflow: hidden;
+	margin-bottom: 2%;
+}
+
+.left-align {
+	text-align: left;
+	width: 50%;
+	float: left;
+}
+
+.right-align {
+	text-align: right;
+	width: 50%;
+	float: right;
+}
+
+#room-content .panel-heading {
+	overflow: hidden;
+	border-radius: 0;
+	background-color: #0069cc;
+}
+
+#room-content .panel {
+	border-radius: 0;
+	border-color: #0069cc;
+}
+
+#room-content img {
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+
+#room-content .panel-body {
+	background-color: #d9b38c;
+}
+
+.room-image {
+	width: 54%;
+	height: 36%;
+	float: left;
+}
+
+
+#reselect-rooms {
+	display: none;
+}
+
+p.clear-left {
+	clear: left;
+}
+
+#room-selections thead {
+	background-color: #0069cc;
+	color: #fff;
+}
+
+#room-selections tbody {
+	background-color: #d9b38c;
+}
+
+#room-selections th, #room-selections td {
+	text-align: center;
+	font-weight: 600;
+}
+
+#room-selections td.align-right {
+	text-align: right;
+	background-color: #0069cc;
+	color: #fff;
+	font-weight: 600;
+}
+
+#room-selections, #customer-info, #customer-update, #room-type-select-form, #add-employee-form, #dismiss-employees, #sorting-form {
+	margin-bottom: 6em;
+}
+
+/* For some reason margin-bottom: 6em doesn't render properly for this element: */
+#room-price-form {
+	margin-bottom: 9em;
+}
+
+.form-render {
+	background-color: #d9b38c;
+	padding: 15px;
+	border: 2px solid #0069cc;
+	margin-bottom: 15px;
+}
+
+/* I decided to use the #room-selections table rendering for the whole website,
+   after I used them just for #room-selections above, so this CSS is duplicated
+   from above, with a class instead of an ID */
+.table-render thead {
+	background-color: #0069cc;
+	color: #fff;
+}
+
+.table-render tbody {
+	background-color: #d9b38c;
+}
+
+.table-render th, .table-render td {
+	text-align: center;
+	font-weight: 600;
+}
+
+.table-render td.align-right {
+	text-align: right;
+	background-color: #0069cc;
+	color: #fff;
+	font-weight: 600;
+}
+
+
+
+.employee-navbar {
+	border-bottom: 2px solid #0069cc;
+}
+
+#room-price-form input[type=number] {
+	width: 100%;
+	max-width: 15vw;
+}
+
+
+
+/* From https://www.w3schools.com/css/css_pseudo_classes.asp */
+/* unvisited link */
+#to-reservations a:link {
+    color: #fff;
+}
+
+/* visited link */
+#to-rerservations a:visited {
+    color: #fff;
+}
+
+/* mouse over link */
+#to-reservations a:hover {
+    color: #fff;
+	text-decoration: none;
+}
+
+/* selected link */
+#to-reservations a:active {
+    color: #fff;
+}
+
+button#to-reservations { /* This doesn't work for some reason */
+	background-color #0069cc;
+}
+
+
+/* Below, classes already defined in Bootstrap are being redefined */
+.row {
+	padding-top: 1em;
+}
+
+.navbar {
+	border-radius: 0;
+}
+
+.checkbox input[type=checkbox] {
+	margin-left: 0;
+}
+
+
+/* For mobile devices smaller than 500px */
+@media screen and (max-width: 500px) {
+	#myCarousel h3, #myCarousel p {
+		font-size: 0; /* Remove captions for mobile users on small phones */
+	}
+	
+	#myCarousel {
+		margin: 0;
+		margin-bottom: 2%;
+	}
+	
+	h1 {
+		font-size: 1.5em;
+	}
+	
+	h3 {
+		font-size: 1.1em;
+	}
+	
+	.footer .row {
+		padding: 0;
+		margin: 0;
+	}
+	
+	.footer .row * {
+		margin: .5em 0;
+		padding: 0 .25em;
+		font-size: .96em;
+	}
+	
+	p {
+		font-size: .9em;
+	}
+	
+	#room-selections, #payment-form {
+		font-size: .9em;
+	}
+	
+	/* To make unimportant table cells disappar for small devices */
+	.vanish {
+		display: none;
+	}
+}
+
+/* For some reason, the img inside #myCarousel won't resize to its #myCarousel container.
+   This makes sure that happens */
+#myCarousel img {
+	height: 60vw;
+	width: 90vw;
+	max-height: 70vh;
+	max-width: 105vh;
+}
+
+#room-content p.bold {
+	font-size: 1em;
+}
+
+#reselect-rooms {
+	text-align: center;
+}
+
+#chart {
+	min-height: 300px;
+}

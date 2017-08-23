@@ -1,0 +1,53 @@
+SOURCES:
+Logo: Logo made with <a href="https://logomakr.com">Logomakr.com</a>
+
+SOURCES FOR ALL IMAGES USED ON WEBSITE:
+Master Bedroom Image: https://pixabay.com/en/master-bedroom-residence-home-house-2014865/
+Double Bedroom Image: https://pixabay.com/en/travel-hotel-room-hotel-room-bed-1550377/
+Standard Room Image: https://pixabay.com/en/hotel-podjavorn%C3%ADk-room-1191709/
+Hotel Conference/Dining Room Image: https://pixabay.com/en/interior-hotel-rendering-1026456/
+Hotel Exterior Image: https://pixabay.com/en/roznowskie-lake-pictures-of-drone-1273941/
+Hotel Beach Image: https://pixabay.com/en/blue-sky-white-cloud-beach-tourism-2433887/
+Hotel Pool Image: https://pixabay.com/en/pool-cottage-interior-1318072/
+Hotel Restaurant Image: https://pixabay.com/en/hotel-berlin-kurf%C3%BCrstendamm-city-951599/
+
+REGISTERED DATABASE USERS:
+Email:							Password:					Customer Name (inspiration for user):
+fake@yahoo.com					yyyyy						Diana Poelvoorde (my mother)
+fast@gmail.com					tails123					Sonic Hedgehog (video game character, popular in early 1990s)
+fake@blah.com					sonic123					Miles Prowler (aka "Tails" from "Sonic the Hedgehog" video games)
+
+REGISTERED DATABASE ADMINISTRATORS:
+Email:							Password:					Employee Name (inspiration for user):
+fake@gmail.com					xxxxx						Mathew Poelvoorde (myself)
+slow@gmail.com					eggman456					Knuckles Echidna (also from "Sonic the Hedgehog" video games)
+
+TRANSACTIONS SUPPORTED BY USERS:
+1. Insert entries into 'reservations' table
+2. Update entries in 'customers' table
+3. Delete entries from 'reservations' table
+
+TRANSACTIONS SUPPORTED BY ADMINISTRATORS:
+1. Insert new employees (hire them)
+2. Delete existing employees other than themselves (fire them)
+3. Update employee information
+4. Update room type information
+5. Update room price information
+
+IMPLEMENTATION NOTES:
+1. The "employee" view uses a navbar with white background, and the "customer" view uses a navbar with a black background. This helps to distinguish both website views from each other.
+2. If the price of a room changes, existing customers with bookings will be charged the price at booking time. That means poor Sonic Hedgehog has to pay $409/night for his
+   reservation of Room 106 from Sept 2 to 9, and won't be able to take advantage of my later price drop afterward to $389 unless he cancels and rebooks his reservation.
+3. My prices are a tad expensive, but these are luxury rooms after all (not like those run-down hotels on Huron Church Road), and my hotel has only 6 rooms.
+4. I used jQuery version 1.12.4 (not the current one) since the Bootstrap "Get Started" page used it when I started to work on the project.
+   They've changed it in the past few days to 3.2.1, however. I downloaded jQuery 1.12.4 from here: http://minime.stephan-brumme.com/jquery/1.12.4/
+
+DATABASE ACCESS TECHNIQUES USED:
+1. Search rooms by availability from [DATE] to [DATE + N days], where 1 <= N <= 7
+2. Search rooms by number of beds in the room (1 or 2 or any)
+3. Order rooms by price or room number. Default "order by" is room_number, otherwise order by price (ascending or descending)
+4. Occupancy rate by room
+5. Occupancy rate for total hotel
+6. Hotel revenue by week for whole hotel
+7. Hotel revenue by week by room number
+[To Add] 6. Most popular customers
