@@ -1,14 +1,14 @@
 <?php
 
 	// For accessing database:
-	$db = 'poelvoo_fp';
-	$hn = 'localhost';
-	$un = 'poelvoo_fp';
-	$pw = 'mypassword';
+	$db = ''; // REDACTED FOR SECURITY REASONS
+	$hn = ''; // REDACTED
+	$un = ''; // REDACTED
+	$pw = ''; // REDACTED
 	
 	// For salting passwords:
-	$pre_salt = '@$%!';
-	$post_salt = '&5h?*';
+	$pre_salt = ''; // REDACTED
+	$post_salt = ''; // REDACTED
 	
 	// To establish the connection on each page
 	$conn = new mysqli($hn, $un, $pw, $db);
@@ -23,12 +23,5 @@
 		$hashed_password = hash('ripemd128', "$pre_salt$password$post_salt");
 		return $conn->real_escape_string($hashed_password);
 	} */
-/*
--- To log into database:
---Database:	poelvoo_fp
---Host:	localhost
---Username:	poelvoo_fp
---Password:	mypassword
-*/
 
 ?>
